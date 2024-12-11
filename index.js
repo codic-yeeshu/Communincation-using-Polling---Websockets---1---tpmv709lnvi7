@@ -12,7 +12,7 @@ const messages = [];
 
 app.get("/findMessages", (req, res) => {
   try {
-    return res.status(200).json(messages);
+    return res.status(200).json({ messages });
   } catch (err) {
     console.error(`Error occurred in file: index, function: get -`, err);
     return res.status(500).json({ message: "Internal Server Error" });
